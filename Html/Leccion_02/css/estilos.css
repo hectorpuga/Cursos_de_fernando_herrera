@@ -1,0 +1,35 @@
+
+.Titulo {
+    
+    position: absolute;
+    left: 30%;
+    top: 10%;
+}
+
+.Decripcion{
+    position: absolute;
+    top:50%;
+    left: 25%;
+}
+
+.v-line{
+    border-left: thick solid #000;
+    position: absolute;
+    height:50px;
+    left: 29%;
+    top: 100px;
+  
+   }
+
+   .BotonIniciar{
+    width: 100px;
+    border-radius: 50px;
+    position: absolute;
+    height:30px;
+    left: 38%;
+    width: 100px;
+  
+    top: 300px;
+
+  
+   }

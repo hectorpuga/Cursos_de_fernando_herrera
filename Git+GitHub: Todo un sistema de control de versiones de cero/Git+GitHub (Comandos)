@@ -1,0 +1,84 @@
+Nota: Usar un solo menos nos permite abreviar comandos y usar 2 menos son para usar palabras completas
+
+
+COMANDOS:
+
+Seccion 1:
+
+Primeros comandos de git:
+
+git --version (git -v): Nos muestra la versión que tenemos de git
+
+git --help (git -h): Nos muestra ayuda sobre los comandos que existen en git
+
+git config --global user.name: Nos permite establecer nuestro nombre, para que asi sepa git quienes somos
+
+git config --global user.email: Nos permite establecer nuestro correo, para que sepa git cual es nuestro correo
+
+git config --global -e: Nos permite checar las configuraciónes que se le han echo a git, por ejemplo checar si las configuraciones del nombre y correo que dimos anteriormente con los comandos, se establecieron correctamente, osea, se cambiaron o ver si los alias que establecimos, se agregaron 
+
+
+
+Nuestro primer repositorio:
+
+git init : Inicializa un repositorio de git
+
+git status: Nos proporcionara información sobre los commits, la rama donde nos encontramos
+
+git add <nombre>: Nos permite añadir o preparar un archivo por nombre al cual les daremos seguimiento mediante git
+
+git add .: Nos permite añadir o prepar todos los archivo a los cuales les daremos seguimeinto mediante git
+
+git reset <nombre>: Nos permite restaurar un archivo a su estado base, una utilidad que se le puede dar, es eliminar un seguimiento a un archivo en particular, el cual puede estar en el estado de preparación para darle seguimiento al archivo.
+
+git commit -m <Message>: Nos permite hacer  commit a todos los archivos que esten en estado de preparación de hacerlo, para asi aguardar una copia del estado en el que esta el codigo actualmente.
+
+
+
+¿Que hace git por nosotros en estos momentos?:
+
+git checkout -- .: Nos permite reconstruir el proyecto a como esta en el ultimo commit
+
+
+
+Cambia nombre de la rama Master a Main:
+
+git branch: Nos permite o proporciona el nombre de la rama en la que actualmente estamos trabajando
+
+git branch -m <nombre actual> <nombre nuevo>: Este comando nos permite cambiar el nombre de cualquier rama que deseemos
+
+git config --globlal init.defaultBranch <name>: Nos permite renombrar la rama principal con otro nombre, y poner dicho nombre por default para que cada vez que iniciemos un proyecto, este por defecto dicha rama con el respectivo nombre que se proporciono.
+
+
+
+Demostración de la creación, puesta en escena y commits
+
+git commit -am <Message>: Este comando es una forma de añadir y hacer un commit en una sola linea, sin necesidad de hacerlos por separado con los anteriores comandos que se mostraron anteriormente los cuales son "git add <nombreArchivo> o git add ." y "git commit -m <Message>", Dicho comando simplificado, solomente funcionara con aquellos archivos que tengan un seguimiento con anterioridad.
+
+git log: Nos permite ver todos los commits que hemos echo con su respectiva fecha de creación y mensajes los cuales fueron definidos cuando hicimos el commit
+
+
+
+Diferentes formas de agregar archivos al escenario:
+
+git add <Path>*.<formato de archivo>: Este comando es un comodin que nos permite agregar al stech todos los archivos que se encuentren en la carpeta que estemos y tengan dicho formato, ademas de que archivos que no tengan un nombre y solamente tengan el formato, no seran validos para este comando que es un comodin, ejemplo de el nombre de un archivo no aceptado:".gitpeek"
+
+
+
+Direntes formas de añadir al Stage:
+
+git add /<carpte o Path>: Este comando nos permite agregar todo lo que se encuentra en un directorio al stage, incluyendo subdirectorios, archivos de subdirectorios ect.
+
+
+
+Creando Alias para nuestros comandos:
+
+git status --short: Nos proporciona un resumen muy condensado de la información mas importante cuando hacemos un git status
+
+git config --global alias.<alias> <Comando que representara el alias con comillas>: Este comando nos permite declarar alias a comandos los cuales sean demasiado largo, para que asi sean faciles y rapidos de escribir, ademas de que sean faciles de recordar, dichos alias, pueden ser definidos en el archivo de configuración global de git y ademas de que los alias deben de ser unicos, osea que no deben de chocar con las banderas del propio git.
+
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all": Es un alias que nos proporciono Fernando Herrera, el cual usa en su dia a dia, el cual nos permite visualizar la información de los logs, de una forma mas agradable y ordenada en la consola.
+
+
+
+
